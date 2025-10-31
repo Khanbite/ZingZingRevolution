@@ -21,4 +21,16 @@ public class DanceRoutine {
         }
         return modify.toString();
     }
+
+    public String remixRoutine() {
+        String base = buildRoutine();
+        StringBuilder remixed = new StringBuilder("--- REMIX ---\n");
+        remixed.append(base);
+        if (remixed.charAt(remixed.length() - 1) == '\n') {
+            remixed.delete(remixed.length() - 1, remixed.length());
+        }
+        remixed.reverse();
+        remixed.append("\n(Backwards Boohbah Shuffle!)");
+        return remixed.toString();
+}
 }
